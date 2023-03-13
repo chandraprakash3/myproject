@@ -1,0 +1,34 @@
+<p>providing user details:</p>
+<table>
+    <tr>
+        <th>id</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>gender</th>
+        <th>DOb</th>
+        <th>phone</th>
+        <th>emailid</th>
+        <th>password</th>
+        <th>age</th>
+        <th>bloodgroup</th>
+        <th>address</th>
+        <th>image</th>
+        <th>action</th>
+    </tr>
+    <tr *ngFor = "let user of myUsers.users; let i=index">
+        <td>{{user.id}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.gender}}</td> 
+        <td>{{user.birthDate}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.bloodGroup}}</td>
+        <td>{{user.address.address}} {{user.address.city}} {{user.address.postalCode}}</td>
+        <td><img class ="image"src="{{user.image}}" alt=""></td>
+        <td> <img (click)="deleteUser(i)" class="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAB8CAMAAABty38BAAAAmVBMVEX///8qkucREiQAAADs7O0ZjeYAiOWLvfDy+P2cxvJDm+kjkOeSzPxgpuvs9v2Hx/wAABfA2vYAhOQLDCDe7Pp7te7p8vwAABtSoutxsO3U5vmmzPOSwPDI3/e11PVmqesuLjtlZW1+foVZWWJGR1ElJjMaGiofHyk4OEKNjZFQUFRbW19qaWuVlZpHR0lAQElzdHykpKm5ubzXcWLmAAADFElEQVRoge2YC3OiMBCAwV4QSe2hqCjUSnhYsLVw9/9/3GVDgBTvWqZd7E0nn1Pdkhk+N+Sx0TA0Go1Go9FoNBqNRqP5P7lTuY4y+KkSXMW5v1X4xs5Add6O5rTDecfWUdkqLSGmc2dRBVNFbbDWeMqAmMOw8Hp6YQ11LtCcq6F5khWa0wiXZAhL1EG0mg0BMcsvw34fbOXUeZ8psnNO3x20dI7sPAxw7pCduy9wrgc4EVdbwXSAE3sMTcXyR5x2FexCKkOC7bznt6Xm3t43+fKwcULIL5N7ZOeMyETqB0vg2a1J+xghJDNkZ9g477t+lP09kyFBXeGlU2QUXjhBBdmjOx+InICXzgejnr4iQHceZPDKaYEKlikL2wnliVhQ6zpFde6NejlGLExq9uDc8iC4cELdtaVSjolQOXyLXF04eXVgOyZq0ac6+Slss+w5lxt+cRQnpEdNfnv7wsmT38A6tMQuhzaiS7nTuHBCKyxO1mYMJ139wykKYAv7/HsHTlEy98cQMeThwsIuwmzSjBKz5zQNOcJGcsIMhKmoOKlj1LNXJIwLaZa5ec8Ji9PDOE7abCG7nrNZ+KmJ7hSVAGyVYqfunGL3no3kNGX1Me05u9GE7nTUnFRnm7uD7oTh2m3airN5xmLXGcEJY3TWPsV1m2fbiIs4sNDQDurfTejCXtQBDexQtB3QnWKKUGLSrpBuwvoa+nGlPbD87QghW7CPK01d+wboZTxsLG+fkij6VsZZOdZbON/hRxONRqPRaDQajUaj0Xwrflwf4+b6GJPXeJPxAefRa3Ej1/N9z5/42XFMp59kSfmYsjTN8yJ+Lk5P2fP5JYk+nLLni+/v+20qPuTh8hfPRji9MqlYdXpiL4yl5zgu4l/l78L9cBpempRRGpUszaM0zfI8zRPGEhYzeHfrvvXihKUJT5Slp6oozkXxfD5/wnmqKi4okjiueMSquOJOVvKIfzbOzM2zKHrMs8ljepNlmVseP/M4PX5ff+IeXc/l/QrxJDvyC/xdjFExbj14eeJ/COq/EZA37c+Va/AHVjdK9UPRY4UAAAAASUVORK5CYII=" alt="">delete
+        </td>
+    </tr>
+</table>

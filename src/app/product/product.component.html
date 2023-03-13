@@ -1,0 +1,21 @@
+<div class="cart-main" *ngFor= "let list of addedProducts; let i = index">
+    <div><img class="product-img" src="{{list.image}}" alt="" width="100px" height="100px"></div>
+    <div clas=" details">
+        <div><p>{{list.title}}</p></div>
+        <div><p>cost:<b>{{list.price}}</b></p></div>
+        <div><button (click)="deleteUser(list)" class="button">Remove</button></div>
+    </div>
+</div>
+<div class="container main">
+    <div class="sub-div" *ngFor= "let list of products">
+        <div class="product-img"><img src="{{list.image}}" alt="" class="center"></div>
+        <div class="product-details">
+            <p class="text" title="{{list.title}}"><b>{{list.title}}</b></p>
+            <p class="detail" title="{{list.description}}">{{list.description}}</p>
+            <p>Cost: <b>  $ {{list.price}}</b></p>
+            <div>
+            <button (click)="addData(list)" class="button"> Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div> 
